@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oraculista da Alma | Nágilla Halana</title>
+<meta name="description" content="Leituras oraculares e terapias holísticas com Nágilla Halana. Despertar da consciência, clareza e conexão com seu eu mais genuíno.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --wine: #441015;
+  --wine-dark: #2a0a0d;
+  --burgundy: #582419;
+  --gold: #C9A96E;
+  --gold-light: #d4bc8a;
+  --gold-muted: #967F59;
+  --rose: #C39583;
+  --olive: #786F50;
+  --cream: #F5EDE3;
+  --dark-bg: #1a0a0d;
+  --text-light: #e8ddd0;
+  --text-gold: #C9A96E;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-light);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.moon-phases {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  color: var(--gold);
+  opacity: 0.7;
+  letter-spacing: 6px;
+  margin: 16px 0;
+}
+
+.ornament {
+  text-align: center;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 1.2rem;
+  letter-spacing: 12px;
+  margin: 20px 0;
+}
+
+.section-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 40px;
+  opacity: 0.5;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: all 0.4s ease;
+  background: transparent;
+}
+
+nav.scrolled {
+  background: rgba(26, 10, 13, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.nav-logo span {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 1.5px;
+  background: var(--gold);
+  transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--wine-dark) 50%, var(--dark-bg) 100%);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 50%, rgba(68,16,21,0.4) 0%, transparent 70%);
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding-top: 80px;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.hero-text h1 em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  margin-bottom: 36px;
+  max-width: 440px;
+  line-height: 1.8;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  width: 340px;
+  height: 460px;
+  border-radius: 200px 200px 20px 20px;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 60px rgba(201,169,110,0.15), 0 20px 60px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, transparent 60%, rgba(26,10,13,0.3) 100%);
+}
+
+/* Stars decoration */
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.stars span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.8; }
+}
+
+/* CTA Button */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-cta:hover {
+  background: var(--gold);
+  color: var(--wine-dark);
+}
+
+.btn-cta-filled {
+  background: var(--gold);
+  color: var(--wine-dark);
+}
+
+.btn-cta-filled:hover {
+  background: var(--gold-light);
+  box-shadow: 0 4px 20px rgba(201,169,110,0.3);
+}
+
+/* ===== ABOUT ===== */
+.about {
+  padding: 120px 0;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, var(--wine-dark) 50%, var(--dark-bg) 100%);
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-img {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(201,169,110,0.2);
+}
+
+.about-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.about-img:hover img { transform: scale(1.05); }
+
+.about-img:first-child {
+  grid-column: 1 / -1;
+}
+
+.about-img:first-child img {
+  height: 320px;
+}
+
+.about-text h2 {
+  font-size: 2.6rem;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.about-text p {
+  font-size: 0.92rem;
+  opacity: 0.85;
+  margin-bottom: 16px;
+  line-height: 1.9;
+}
+
+.about-text .signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 24px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+  padding: 120px 0;
+  background: var(--dark-bg);
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(68,16,21,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card {
+  background: linear-gradient(145deg, rgba(68,16,21,0.4) 0%, rgba(42,10,13,0.6) 100%);
+  border: 1px solid rgba(201,169,110,0.15);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201,169,110,0.35);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.service-card:hover::before { opacity: 1; }
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.service-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.service-price small {
+  display: block;
+  font-size: 0.7rem;
+  font-family: 'Raleway', sans-serif;
+  color: var(--rose);
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.service-details {
+  text-align: left;
+  margin: 16px 0;
+  padding: 16px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.service-details li {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 6px;
+  list-style: none;
+  padding-left: 16px;
+  position: relative;
+}
+
+.service-details li::before {
+  content: '~';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ===== VIDEO CHAMADA SECTION ===== */
+.videocall {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, var(--wine-dark) 50%, var(--dark-bg) 100%);
+}
+
+.videocall-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.videocall-card {
+  background: linear-gradient(145deg, rgba(88,36,25,0.3) 0%, rgba(42,10,13,0.5) 100%);
+  border: 1px solid rgba(201,169,110,0.2);
+  border-radius: 16px;
+  padding: 48px 36px;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.videocall-card:hover {
+  border-color: rgba(201,169,110,0.4);
+  transform: translateY(-4px);
+}
+
+.videocall-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.videocall-card .duration {
+  font-size: 0.8rem;
+  color: var(--rose);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.videocall-card p {
+  font-size: 0.88rem;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  padding: 100px 0;
+  background: var(--dark-bg);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  position: relative;
+  border: 1px solid rgba(201,169,110,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.gallery-item:hover img { transform: scale(1.08); }
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(26,10,13,0.5) 100%);
+  pointer-events: none;
+}
+
+.gallery-item:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+/* ===== INFO SECTION ===== */
+.info {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--dark-bg) 0%, var(--wine-dark) 100%);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.info-card {
+  text-align: center;
+  padding: 40px 24px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(201,169,110,0.1);
+}
+
+.info-card .icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.info-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  line-height: 1.8;
+}
+
+/* ===== PROMOS ===== */
+.promos {
+  padding: 80px 0;
+  background: var(--wine-dark);
+}
+
+.promos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.promo-card {
+  padding: 36px;
+  border: 1px solid rgba(201,169,110,0.25);
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(68,16,21,0.3);
+}
+
+.promo-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.promo-card p {
+  font-size: 0.88rem;
+  opacity: 0.8;
+}
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  padding: 100px 0;
+  text-align: center;
+  background: linear-gradient(180deg, var(--wine-dark) 0%, var(--dark-bg) 100%);
+  position: relative;
+}
+
+.cta-banner h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 20px;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.cta-banner p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 100px 0;
+  background: var(--dark-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px 20px;
+  background: rgba(68,16,21,0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(201,169,110,0.1);
+  transition: all 0.3s;
+}
+
+.contact-item:hover {
+  border-color: rgba(201,169,110,0.3);
+  background: rgba(68,16,21,0.5);
+}
+
+.contact-item .icon { font-size: 1.4rem; }
+
+.contact-item .label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+}
+
+.contact-item .value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: var(--gold);
+}
+
+.contact-image {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(201,169,110,0.2);
+  height: 450px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  padding: 50px 0 30px;
+  background: var(--wine-dark);
+  text-align: center;
+  border-top: 1px solid rgba(201,169,110,0.1);
+}
+
+footer .footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+footer .footer-tagline {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-muted);
+  margin-bottom: 24px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(201,169,110,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+.social-links a:hover {
+  background: var(--gold);
+  color: var(--wine-dark);
+  border-color: var(--gold);
+}
+
+footer .copyright {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: all 0.3s;
+  animation: pulse-wpp 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+@keyframes pulse-wpp {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6); }
+}
+
+/* ===== ANIMATIONS ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .hero .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero-text p { margin: 0 auto 36px; }
+  .hero-image-frame { width: 280px; height: 380px; }
+  .about .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .videocall-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-grid { grid-template-columns: 1fr; }
+  .promos-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { 
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(26,10,13,0.98);
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+  }
+  .nav-links.active { display: flex; }
+  .nav-toggle { display: flex; }
+  .services-grid { grid-template-columns: 1fr; }
+  .gallery-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .gallery-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .hero-image-frame { width: 240px; height: 330px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      Oraculista da Alma
+      <span>Nágilla Halana</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+  <div class="stars">
+    <span style="top:10%;left:15%;animation-delay:0s"></span>
+    <span style="top:20%;left:80%;animation-delay:0.5s"></span>
+    <span style="top:35%;left:25%;animation-delay:1s"></span>
+    <span style="top:50%;left:70%;animation-delay:1.5s"></span>
+    <span style="top:65%;left:10%;animation-delay:2s"></span>
+    <span style="top:75%;left:90%;animation-delay:0.8s"></span>
+    <span style="top:85%;left:45%;animation-delay:1.2s"></span>
+    <span style="top:15%;left:55%;animation-delay:2.2s"></span>
+    <span style="top:45%;left:40%;animation-delay:0.3s"></span>
+    <span style="top:90%;left:75%;animation-delay:1.8s"></span>
+  </div>
+  <div class="container">
+    <div class="hero-text">
+      <div class="moon-phases">&#9790; &#9789; &#9790; &#9679; &#9790; &#9789; &#9790;</div>
+      <h1>Desperte a<br><em>Sabedoria</em><br>da sua Alma</h1>
+      <p>Guio e oriento pessoas através do despertar da consciência, trazendo clareza, identificando bloqueios internos que impedem de prosperar e possibilitando um contato com o seu eu mais genuíno.</p>
+      <a href="#servicos" class="btn-cta">Conhecer Serviços</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image-frame">
+        <img src="img/img-extra15.jpg" alt="Nágilla Halana - Oraculista da Alma" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="sobre">
+  <div class="container">
+    <div class="about-images fade-in">
+      <div class="about-img">
+        <img src="img/img-extra11.jpg" alt="Nágilla com cartas oraculares" loading="lazy">
+      </div>
+      <div class="about-img">
+        <img src="img/nagilla-perfil.jpg" alt="Nágilla sorrindo" loading="lazy">
+      </div>
+      <div class="about-img">
+        <img src="img/img-extra1.jpg" alt="Nágilla com runas" loading="lazy">
+      </div>
+    </div>
+    <div class="about-text fade-in">
+      <div class="section-subtitle">Bem-vinda(o)</div>
+      <h2>Sou Nágilla Halana</h2>
+      <div class="ornament">~ &#9679; ~</div>
+      <p>Oraculista e terapeuta holística, meu trabalho é guiar e orientar pessoas através do despertar da consciência. Através das leituras oraculares, trago clareza e ajudo a identificar os bloqueios internos que impedem você de prosperar.</p>
+      <p>Utilizo cartas oraculares, runas e outros instrumentos sagrados para estabelecer uma conexão profunda com a sua essência, possibilitando um contato genuíno com a verdade da sua alma.</p>
+      <p>Cada leitura é única e personalizada, feita com muito cuidado, respeito e confidencialidade. Meu propósito é te ajudar a enxergar com clareza o caminho que já existe dentro de você.</p>
+      <div class="signature">Nágilla Halana</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="section-subtitle fade-in">O que eu ofereço</div>
+    <h2 class="section-title fade-in">Catálogo de Serviços</h2>
+    <div class="moon-phases fade-in">&#9790; &#9789; &#9679; &#9789; &#9790;</div>
+    <div class="gold-line"></div>
+
+    <div class="services-grid">
+      <!-- Perguntas Avulsas -->
+      <div class="service-card fade-in">
+        <span class="service-icon">&#10052;</span>
+        <h3>Perguntas Avulsas</h3>
+        <p>Leitura profunda e esclarecedora. Ideal para tomada de decisões importantes e clareza.</p>
+        <ul class="service-details">
+          <li>01 Pergunta Objetiva — R$ 58,00</li>
+          <li>02 Perguntas Objetivas — R$ 88,00</li>
+          <li>04 Perguntas Objetivas — R$ 118,00</li>
+        </ul>
+        <div class="service-price">
+          a partir de R$ 58
+          <small>Envio pelo WhatsApp (áudios e fotos)</small>
+        </div>
+      </div>
+
+      <!-- Cruz Celta -->
+      <div class="service-card fade-in">
+        <span class="service-icon">&#10016;</span>
+        <h3>Cruz Celta</h3>
+        <p>Um guia completo para compreender uma situação ou problema da sua vida, analisando 10 aspectos fundamentais.</p>
+        <ul class="service-details">
+          <li>Energia sobre a questão</li>
+          <li>O que impede de manifestar</li>
+          <li>Nível consciente e inconsciente</li>
+          <li>Influência do passado</li>
+          <li>O que o futuro reserva</li>
+          <li>Fatores internos e externos</li>
+          <li>Expectativas, medos e sonhos</li>
+          <li>Resultado final da situação</li>
+        </ul>
+        <div class="service-price">
+          R$ 120,00
+          <small>Envio pelo WhatsApp (áudios e fotos)</small>
+        </div>
+      </div>
+
+      <!-- Leitura Mensal -->
+      <div class="service-card fade-in">
+        <span class="service-icon">&#9789;</span>
+        <h3>Leitura Oracular Mensal</h3>
+        <p>Fique por dentro das energias que irão guiar o seu mês! Uma visão completa em todas as áreas da vida.</p>
+        <ul class="service-details">
+          <li>Energia geral do mês</li>
+          <li>Energia semanal</li>
+          <li>Profissional e Financeiro</li>
+          <li>Afetivo e Saúde</li>
+          <li>Espiritual</li>
+          <li>+ Seu nome no Altar da Sorte</li>
+        </ul>
+        <div class="service-price">
+          R$ 88,00
+          <small>Envio pelo WhatsApp conforme agendamento</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VIDEO CHAMADA ===== -->
+<section class="videocall">
+  <div class="container">
+    <div class="section-subtitle fade-in">Conexão ao vivo</div>
+    <h2 class="section-title fade-in">Vídeo Chamada</h2>
+    <div class="moon-phases fade-in">&#9790; &#9789; &#9679; &#9789; &#9790;</div>
+    <div class="gold-line"></div>
+    <p style="text-align:center; max-width:600px; margin:0 auto 40px; font-size:0.9rem; opacity:0.8;" class="fade-in">
+      Um bate-papo com os Oráculos para quem gosta dessa conexão ao vivo, de forma leve e esclarecedora, te proporcionando transformação, consciência e te conectando com a sua alma e sua verdade.
+    </p>
+
+    <div class="videocall-grid">
+      <div class="videocall-card fade-in">
+        <span class="service-icon">&#9749;</span>
+        <h3>Café com os Oráculos</h3>
+        <p class="duration">40 minutos</p>
+        <p>Uma conversa leve e esclarecedora com os oráculos. Perfeito para quem busca respostas rápidas e orientação.</p>
+        <div class="service-price" style="margin-top:16px">R$ 235,00</div>
+        <small style="color:var(--rose);font-size:0.75rem">Apenas com horário agendado</small>
+      </div>
+      <div class="videocall-card fade-in">
+        <span class="service-icon">&#10024;</span>
+        <h3>Terapeutiando com os Oráculos</h3>
+        <p class="duration">1 hora e 20 minutos</p>
+        <p>Uma sessão profunda de terapia oracular. Ideal para quem busca autoconhecimento, cura e transformação interior.</p>
+        <div class="service-price" style="margin-top:16px">R$ 435,00</div>
+        <small style="color:var(--rose);font-size:0.75rem">Apenas com horário agendado</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <div class="section-subtitle fade-in">Meu universo</div>
+    <h2 class="section-title fade-in">Galeria</h2>
+    <div class="gold-line"></div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in"><img src="img/img-extra15.jpg" alt="Nágilla em sessão" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/velas-cartas.jpg" alt="Velas e cartas" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/runas.jpg" alt="Runas" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/nagilla-carta.jpg" alt="Nágilla com carta" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/mesa-cartas.jpg" alt="Mesa de leitura" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/img-extra1.jpg" alt="Runas e mãos" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/grupo.jpg" alt="Encontros e vivências" loading="lazy"></div>
+      <div class="gallery-item fade-in"><img src="img/mesa-leitura.jpg" alt="Leitura oracular" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INFO ===== -->
+<section class="info">
+  <div class="container">
+    <div class="section-subtitle fade-in">Informações importantes</div>
+    <h2 class="section-title fade-in">Como Funciona</h2>
+    <div class="gold-line"></div>
+
+    <div class="info-grid">
+      <div class="info-card fade-in">
+        <span class="icon">&#128221;</span>
+        <h4>Agendamento</h4>
+        <p>Todas as leituras são realizadas na data agendada. Os atendimentos são confidenciais e feitos com muito cuidado e respeito.</p>
+      </div>
+      <div class="info-card fade-in">
+        <span class="icon">&#128172;</span>
+        <h4>Entrega</h4>
+        <p>As leituras oraculares são enviadas por foto e áudios no WhatsApp, conforme orientações de agendamento. Exceto as leituras ao vivo por vídeo chamada.</p>
+      </div>
+      <div class="info-card fade-in">
+        <span class="icon">&#128275;</span>
+        <h4>Informações Necessárias</h4>
+        <p>Para realizar as leituras, preciso do seu nome completo e data de nascimento. Se envolver uma terceira pessoa, preciso do nome dela também.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOS ===== -->
+<section class="promos">
+  <div class="container">
+    <div class="section-subtitle fade-in">Fique de olho</div>
+    <h2 class="section-title fade-in">Promoções Semanais</h2>
+    <div class="gold-line"></div>
+
+    <div class="promos-grid">
+      <div class="promo-card fade-in">
+        <span class="service-icon">&#128140;</span>
+        <h4>Terças-feiras</h4>
+        <p>Caixinha de perguntas no Instagram! Acompanhe pelo <strong style="color:var(--gold)">@oraculistadaalma</strong> e participe.</p>
+      </div>
+      <div class="promo-card fade-in">
+        <span class="service-icon">&#127775;</span>
+        <h4>Quintas-feiras</h4>
+        <p>Valor especial de <strong style="color:var(--gold)">R$ 30,00</strong> para 01 pergunta objetiva! Aproveite!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="container fade-in">
+    <div class="moon-phases">&#9790; &#9789; &#9679; &#9789; &#9790;</div>
+    <h2>Seu caminho é iluminado<br>por um mapa de estrelas.<br><em style="color:var(--rose)">Estou aqui para te guiar.</em></h2>
+    <p>Conecte-se com a sua verdade interior e descubra a clareza que a sua alma busca.</p>
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20N%C3%A1gilla!%20Gostaria%20de%20agendar%20uma%20leitura." class="btn-cta btn-cta-filled" target="_blank" rel="noopener">
+      Agendar Leitura
+    </a>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contato">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="section-subtitle">Vamos nos conectar</div>
+        <h3>Entre em Contato</h3>
+        <p>Tire suas dúvidas, agende uma leitura ou simplesmente diga olá. Estou aqui para te guiar nessa jornada de autoconhecimento.</p>
+
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20N%C3%A1gilla!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais." class="contact-item" target="_blank" rel="noopener">
+          <span class="icon">&#128242;</span>
+          <div>
+            <div class="label">WhatsApp</div>
+            <div class="value">Clique para conversar</div>
+          </div>
+        </a>
+
+        <a href="https://instagram.com/oraculistadaalma" class="contact-item" target="_blank" rel="noopener">
+          <span class="icon">&#128247;</span>
+          <div>
+            <div class="label">Instagram</div>
+            <div class="value">@oraculistadaalma</div>
+          </div>
+        </a>
+
+        <a href="https://www.tiktok.com/@oraculistadaalma" class="contact-item" target="_blank" rel="noopener">
+          <span class="icon">&#127926;</span>
+          <div>
+            <div class="label">TikTok</div>
+            <div class="value">@oraculistadaalma</div>
+          </div>
+        </a>
+
+        <a href="https://youtube.com/@oraculistadaalma" class="contact-item" target="_blank" rel="noopener">
+          <span class="icon">&#9654;</span>
+          <div>
+            <div class="label">YouTube</div>
+            <div class="value">@oraculistadaalma</div>
+          </div>
+        </a>
+
+        <div class="contact-item">
+          <span class="icon">&#128338;</span>
+          <div>
+            <div class="label">Agendamento</div>
+            <div class="value">Link na bio do Instagram</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-image fade-in">
+        <img src="img/img-extra4.jpg" alt="Nágilla Halana" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-logo">Oraculista da Alma</div>
+    <div class="footer-tagline">Nágilla Halana</div>
+    <div class="moon-phases" style="margin-bottom:24px">&#9790; &#9789; &#9679; &#9789; &#9790;</div>
+    <div class="social-links">
+      <a href="https://instagram.com/oraculistadaalma" target="_blank" rel="noopener" aria-label="Instagram">&#128247;</a>
+      <a href="https://www.tiktok.com/@oraculistadaalma" target="_blank" rel="noopener" aria-label="TikTok">&#127926;</a>
+      <a href="https://youtube.com/@oraculistadaalma" target="_blank" rel="noopener" aria-label="YouTube">&#9654;</a>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">&#128172;</a>
+    </div>
+    <p class="copyright">&copy; 2026 Oraculista da Alma — Nágilla Halana. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/5500000000000?text=Ol%C3%A1%20N%C3%A1gilla!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20leitura." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('active'));
+});
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
